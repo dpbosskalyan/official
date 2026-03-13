@@ -31,31 +31,30 @@
         :root {
             --matka-pink: #ff2d78;
             --matka-red: #d32f2f;
-            --matka-gold: #ffc107;
-            --tg-blue-light: #229ED9;
-            --tg-blue-dark: #0088cc;
-            --bg-dark: #070b14; 
+            --tg-blue: #0088cc;
+            --bg-main: #FFCC97; /* Requested Color */
+            --text-main: #1e293b;
         }
 
         body {
             font-family: 'Bricolage Grotesque', 'Noto Sans Devanagari', sans-serif;
-            background-color: var(--bg-dark);
-            color: #ffffff;
+            background-color: var(--bg-main);
+            color: var(--text-main);
             overflow-x: hidden;
             -webkit-tap-highlight-color: transparent;
         }
 
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 32px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .tg-button-glow {
-            box-shadow: 0 0 60px -10px rgba(34, 158, 217, 0.5);
+            box-shadow: 0 15px 35px -5px rgba(0, 136, 204, 0.4);
         }
 
         .shimmer {
@@ -70,7 +69,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
             transform: rotate(45deg);
             animation: shimmerEffect 3s infinite linear;
         }
@@ -81,22 +80,18 @@
         }
 
         .mesh-gradient {
-            background: radial-gradient(at 0% 0%, rgba(34, 158, 217, 0.15) 0, transparent 40%),
-                        radial-gradient(at 100% 100%, rgba(255, 45, 120, 0.1) 0, transparent 40%);
+            background: radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.4) 0, transparent 50%),
+                        radial-gradient(at 100% 100%, rgba(0, 136, 204, 0.1) 0, transparent 50%);
         }
 
         .hero-title {
             letter-spacing: -0.04em;
             line-height: 0.85;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
         }
 
         .tap-scale:active {
             transform: scale(0.96);
-        }
-
-        .text-glow-sm {
-            text-shadow: 0 2px 8px rgba(0,0,0,0.9);
         }
 
         ::-webkit-scrollbar { width: 0; display: none; }
@@ -106,12 +101,12 @@
 
     <!-- Header / Branding Area -->
     <div class="fixed top-0 inset-x-0 z-[100] p-4">
-        <div class="max-w-md mx-auto bg-white/95 backdrop-blur-xl rounded-full py-3 px-6 flex items-center justify-between shadow-[0_20px_50px_-10px_rgba(0,0,0,0.6)] border border-white/20">
+        <div class="max-w-md mx-auto bg-white/90 backdrop-blur-xl rounded-full py-3 px-6 flex items-center justify-between shadow-xl border border-white/40">
             <div class="flex items-center gap-2">
                 <span class="text-[#0088cc] font-black text-2xl italic leading-none">Dp</span>
-                <span class="text-zinc-950 font-extrabold text-[11px] tracking-tighter uppercase border-l-2 border-zinc-200 pl-2">BOSS.BOSTON</span>
+                <span class="text-zinc-900 font-extrabold text-[11px] tracking-tighter uppercase border-l-2 border-zinc-200 pl-2">BOSS.BOSTON</span>
             </div>
-            <div class="flex items-center gap-2 bg-[#0088cc] text-white px-3 py-1.5 rounded-full shadow-lg">
+            <div class="flex items-center gap-2 bg-[#0088cc] text-white px-3 py-1.5 rounded-full shadow-md">
                 <span class="relative flex h-2 w-2">
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
@@ -125,38 +120,35 @@
     <main class="px-6 py-12 max-w-4xl mx-auto text-center pt-32">
         
         <!-- Status Badge -->
-        <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-zinc-900/90 border border-white/10 text-white text-[11px] font-black uppercase tracking-[0.15em] mb-12 shadow-2xl backdrop-blur-md">
+        <div class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/60 border border-white text-zinc-800 text-[11px] font-black uppercase tracking-[0.15em] mb-12 shadow-sm backdrop-blur-md">
             <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
             आज का लीक गेम तैयार है
         </div>
 
-        <h1 class="hero-title text-[72px] md:text-[120px] font-black mb-8 italic uppercase text-glow-sm">
+        <h1 class="hero-title text-[72px] md:text-[120px] font-black mb-8 italic uppercase text-zinc-900">
             KALYAN <br/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-br from-[#229ED9] via-[#0088cc] to-blue-800">FIX GAME</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-br from-[#0088cc] via-[#005580] to-zinc-900">FIX GAME</span>
         </h1>
 
-        <p class="text-zinc-200 text-lg md:text-2xl mb-14 max-w-xl mx-auto leading-relaxed font-medium text-glow-sm">
-            भारत का <span class="text-[#229ED9] font-black underline decoration-[#229ED9]/50 underline-offset-8">नंबर 1</span> मटका गेसिंग प्लेटफार्म। रोजाना 100% सटीक पासिंग।
+        <p class="text-zinc-700 text-lg md:text-2xl mb-14 max-w-xl mx-auto leading-relaxed font-semibold">
+            भारत का <span class="text-[#0088cc] font-black underline decoration-[#0088cc]/30 underline-offset-8">नंबर 1</span> मटका गेसिंग प्लेटफार्म। रोजाना 100% सटीक पासिंग।
         </p>
 
-        <!-- Main Button Area (Telegram Themed) -->
+        <!-- Main Button Area (Telegram Blue) -->
         <div class="max-w-md mx-auto mb-20 relative px-2">
-            <!-- Background Glow behind button -->
-            <div class="absolute inset-0 bg-[#0088cc]/30 blur-[60px] rounded-full -z-10"></div>
+            <!-- Subtle Glow behind button -->
+            <div class="absolute inset-0 bg-[#0088cc]/10 blur-[40px] rounded-full -z-10"></div>
             
-            <button onclick="handleJoinClick()" class="tap-scale shimmer group w-full bg-white rounded-[40px] p-1 shadow-[0_30px_60px_-15px_rgba(0,136,204,0.6)] tg-button-glow transition-all duration-300">
-                <div class="bg-gradient-to-br from-[#229ED9] to-[#0088cc] rounded-[36px] py-8 px-4 flex flex-col items-center gap-4 border border-white/20 group-hover:from-[#0088cc] group-hover:to-[#0077b5] transition-all">
+            <button onclick="handleJoinClick()" class="tap-scale shimmer group w-full bg-white rounded-[40px] p-1 shadow-2xl tg-button-glow transition-all duration-300">
+                <div class="bg-gradient-to-br from-[#229ED9] to-[#0088cc] rounded-[36px] py-9 px-4 flex flex-col items-center gap-4 border border-white/20 group-hover:from-[#0088cc] group-hover:to-[#0077b5] transition-all">
                     <div class="flex items-center gap-4">
-                        <div class="w-16 h-16 bg-white rounded-3xl flex items-center justify-center shadow-xl rotate-3 group-hover:rotate-0 transition-transform">
+                        <div class="w-16 h-16 bg-white rounded-3xl flex items-center justify-center shadow-lg rotate-2 group-hover:rotate-0 transition-transform">
                             <i data-lucide="send" class="w-10 h-10 text-[#0088cc] fill-[#0088cc]"></i>
                         </div>
                         <div class="text-left">
                             <span class="block text-white text-3xl font-black tracking-tight leading-none mb-1">ज्वाइन टेलीग्राम</span>
                             <div class="flex items-center gap-2">
-                                <span class="bg-white/20 text-white text-[12px] px-2 py-0.5 rounded font-black tracking-wider border border-white/30">
-                                    351₹
-                                </span>
-                                <span class="text-white/80 text-[10px] font-bold uppercase tracking-[0.2em]">
+                                <span class="text-white/90 text-[11px] font-bold uppercase tracking-[0.25em]">
                                     (JOIN NOW)
                                 </span>
                             </div>
@@ -168,27 +160,27 @@
 
         <!-- Features Grid -->
         <div class="grid grid-cols-2 gap-5 text-left mb-24">
-            <div class="glass-panel p-6 border-blue-500/20">
-                <div class="w-12 h-12 bg-[#0088cc]/20 rounded-2xl flex items-center justify-center mb-5 text-[#0088cc] border border-[#0088cc]/20">
+            <div class="glass-panel p-6">
+                <div class="w-12 h-12 bg-[#0088cc]/10 rounded-2xl flex items-center justify-center mb-5 text-[#0088cc] border border-[#0088cc]/10">
                     <i data-lucide="crown" class="w-6 h-6"></i>
                 </div>
-                <h4 class="font-black text-[13px] uppercase tracking-tight mb-2 text-white">V.I.P गेम</h4>
-                <p class="text-zinc-400 text-[11px] leading-relaxed">एक्सपर्ट्स द्वारा रिसर्च की गई 100% फिक्स जोड़ियां।</p>
+                <h4 class="font-black text-[13px] uppercase tracking-tight mb-2 text-zinc-900">V.I.P गेम</h4>
+                <p class="text-zinc-600 text-[11px] leading-relaxed font-medium">एक्सपर्ट्स द्वारा रिसर्च की गई 100% फिक्स जोड़ियां।</p>
             </div>
 
-            <div class="glass-panel p-6 border-blue-500/20">
-                <div class="w-12 h-12 bg-[#0088cc]/20 rounded-2xl flex items-center justify-center mb-5 text-[#0088cc] border border-[#0088cc]/20">
+            <div class="glass-panel p-6">
+                <div class="w-12 h-12 bg-[#0088cc]/10 rounded-2xl flex items-center justify-center mb-5 text-[#0088cc] border border-[#0088cc]/10">
                     <i data-lucide="zap" class="w-6 h-6"></i>
                 </div>
-                <h4 class="font-black text-[13px] uppercase tracking-tight mb-2 text-white">फास्ट रिजल्ट</h4>
-                <p class="text-zinc-400 text-[11px] leading-relaxed">रिजल्ट की अपडेट सबसे पहले हमारे टेलीग्राम पर।</p>
+                <h4 class="font-black text-[13px] uppercase tracking-tight mb-2 text-zinc-900">फास्ट रिजल्ट</h4>
+                <p class="text-zinc-600 text-[11px] leading-relaxed font-medium">रिजल्ट की अपडेट सबसे पहले हमारे टेलीग्राम पर।</p>
             </div>
         </div>
 
         <!-- Feedback Section -->
-        <div class="glass-panel p-10 text-center mb-24 relative overflow-hidden bg-white/[0.02]">
-            <div class="absolute top-0 right-0 -mr-6 -mt-6 opacity-10">
-                <i data-lucide="quote" class="w-32 h-32 text-white"></i>
+        <div class="glass-panel p-10 text-center mb-24 relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mr-6 -mt-6 opacity-[0.03]">
+                <i data-lucide="quote" class="w-32 h-32 text-zinc-900"></i>
             </div>
             <div class="flex justify-center gap-1.5 mb-6">
                 <i data-lucide="star" class="w-5 h-5 fill-amber-500 text-amber-500"></i>
@@ -197,35 +189,35 @@
                 <i data-lucide="star" class="w-5 h-5 fill-amber-500 text-amber-500"></i>
                 <i data-lucide="star" class="w-5 h-5 fill-amber-500 text-amber-500"></i>
             </div>
-            <h3 class="text-3xl font-black italic mb-4 text-white leading-tight">"भरोसा ही हमारी पहचान है!"</h3>
-            <p class="text-zinc-400 text-sm font-medium tracking-tight">हजारों सदस्य रोज मुनाफा कमा रहे हैं। आज ही टेलीग्राम ज्वाइन करें और अपना लॉस कवर करें।</p>
+            <h3 class="text-3xl font-black italic mb-4 text-zinc-900 leading-tight">"भरोसा ही हमारी पहचान है!"</h3>
+            <p class="text-zinc-600 text-sm font-semibold tracking-tight">हजारों सदस्य रोज मुनाफा कमा रहे हैं। आज ही टेलीग्राम ज्वाइन करें और अपना लॉस कवर करें।</p>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="p-12 pb-36 text-center border-t border-white/5 bg-zinc-950/95 backdrop-blur-md">
+    <footer class="p-12 pb-36 text-center border-t border-black/5 bg-white/20 backdrop-blur-md">
         <div class="flex flex-col items-center gap-8">
             <div class="flex items-center gap-3 opacity-60">
-                <div class="w-8 h-8 bg-[#0088cc] rounded-lg flex items-center justify-center">
+                <div class="w-8 h-8 bg-[#0088cc] rounded-lg flex items-center justify-center shadow-sm">
                     <span class="text-white font-black italic">D</span>
                 </div>
-                <span class="text-sm font-black uppercase tracking-[0.3em] text-white">DP BOSS 2026</span>
+                <span class="text-sm font-black uppercase tracking-[0.3em] text-zinc-900">DP BOSS 2026</span>
             </div>
             <p class="text-[11px] text-zinc-600 max-w-xs mx-auto leading-loose font-medium">
                 अस्वीकरण: यह वेबसाइट केवल मनोरंजन के लिए है। हम सट्टा मटका या किसी भी अवैध जुआ गतिविधि का समर्थन नहीं करते हैं। 18+ केवल।
             </p>
-            <div class="flex gap-8 text-[10px] font-black text-zinc-700 uppercase tracking-widest border-t border-white/5 pt-8 w-full justify-center">
-                <a href="#" class="hover:text-[#0088cc] transition-colors">Privacy</a>
-                <a href="#" class="hover:text-[#0088cc] transition-colors">Contact</a>
+            <div class="flex gap-8 text-[10px] font-black text-zinc-500 uppercase tracking-widest border-t border-black/5 pt-8 w-full justify-center">
+                <a href="#" class="hover:text-[#0088cc] transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-[#0088cc] transition-colors">Contact Us</a>
             </div>
         </div>
     </footer>
 
-    <!-- Mobile Sticky CTA - Pure Telegram Theme -->
+    <!-- Mobile Sticky CTA -->
     <div class="fixed bottom-6 inset-x-6 z-[100] md:hidden">
-        <button onclick="handleJoinClick()" class="tap-scale w-full bg-gradient-to-r from-[#229ED9] to-[#0088cc] text-white py-5 rounded-[24px] font-black text-xl flex items-center justify-center gap-3 shadow-[0_25px_60px_-10px_rgba(0,136,204,0.7)] border-b-4 border-[#0077b5] active:border-b-0 transition-all">
+        <button onclick="handleJoinClick()" class="tap-scale w-full bg-gradient-to-r from-[#229ED9] to-[#0088cc] text-white py-5 rounded-[24px] font-black text-xl flex items-center justify-center gap-3 shadow-[0_15px_35px_-5px_rgba(0,136,204,0.4)] border-b-4 border-[#0077b5] active:border-b-0 transition-all">
             <i data-lucide="send" class="w-7 h-7 fill-white"></i>
-            टेलीग्राम (351₹)
+            टेलीग्राम (JOIN NOW)
         </button>
     </div>
 
